@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   bio: { type: String, default: "" },
   role: { type: String, enum: ["user", "admin"], default: "user" },
   isLive: { type: Boolean, default: false },
-  streamKey: { type: String, unique: true, default: "" },
+//   streamKey: { type: String, unique: true, default: "" },
   followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
   following: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
   scheduledStreams: [{ type: mongoose.Schema.Types.ObjectId, ref: "Stream" }],
